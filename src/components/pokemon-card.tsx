@@ -1,8 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import Image from "next/image"
-import Link from "next/link"
+import { Link } from 'react-router-dom'
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import type { Pokemon } from "@/types/pokemon"
@@ -20,15 +19,15 @@ export function PokemonCard({ pokemon }: PokemonCardProps) {
     "/placeholder.svg?height=150&width=150"
 
   return (
-    <Link href={`/pokemon/${pokemon.id}`}>
+    <Link to={`/pokemon/${pokemon.id}`}>
       <Card className="group hover:shadow-lg transition-all duration-200 hover:-translate-y-1 cursor-pointer overflow-hidden">
         <CardContent className="p-4">
           <div className="aspect-square relative mb-3 bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg overflow-hidden">
             {!imageError ? (
-              <Image
+              <img
                 src={imageUrl || "/placeholder.svg"}
                 alt={pokemon.name}
-                fill
+                // fill
                 className="object-contain p-2 group-hover:scale-110 transition-transform duration-200"
                 onError={() => setImageError(true)}
               />
