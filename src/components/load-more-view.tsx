@@ -1,5 +1,3 @@
-"use client"
-
 import { useEffect, useState } from "react"
 import { PokemonCard } from "./pokemon-card"
 import { LoadingGrid } from "./loading-grid"

@@ -1,5 +1,3 @@
-"use client"
-
 import { useEffect, useState } from "react"
 import { PokemonCard } from "./pokemon-card"
 import { PaginationControls } from "./pagination-controls"
