@@ -10,7 +10,7 @@ const routes: RouteObject[] = [
     element: <Home />,
   },
   {
-    path: '/pockemon/:id',
+    path: '/pokemon/:id',
     element: <Pokemon />, 
   },
   {
